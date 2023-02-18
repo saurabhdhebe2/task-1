@@ -17,7 +17,7 @@ const Members = ({ data }) => {
           <div className="border-l-2 pl-2">
             <h1 className="text-lg font-semibold mb-2">Name: {user.name}</h1>
             <p className="text-sm text-gray-500 hover:text-black hover:underline">
-              Membership No. : {user._id}
+              Membership No. : {user.membershipId}
             </p>
             <p className="text-sm text-gray-500 hover:text-black hover:underline">
               Email: {user.email}
@@ -32,21 +32,10 @@ const Members = ({ data }) => {
               Created_at: {user.createdAt}
             </p>
             <button
-              //   onClick={
-              //   async () => {
-              //   try {
-              //     await fetch(`/api/${user._id}`, {
-              //       method: 'UPDATE',
-              //     });
-              //     router.push('/');
-              //   } catch (error) {
-              //     console.log(error);
-              //   }
-              // }
-              // }
-              className="bg-red-600 text-white px-4 py-1 m-4 rounded-md hover:bg-red-700 flex "
+              onClick={() => router.push(`/${user._id}`)}
+              className="bg-blue-600 text-white px-4 py-1 m-4 rounded-md hover:bg-red-700 flex "
             >
-              Delete
+              Edit
             </button>
           </div>
         </div>

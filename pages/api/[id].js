@@ -30,9 +30,7 @@ export default async function (req, res) {
             succesful: false,
             data: `Please Put the E-mail, E-mail field cannot be empty`,
           });
-        } else if (
-          !req.body.email.includes('@' && '.' && [A - Z, a - z, 0 - 9])
-        ) {
+        } else if (!req.body.email.includes('@' && '.')) {
           res.status(400).json({
             succesful: false,
             data: `Please Put Valid email`,

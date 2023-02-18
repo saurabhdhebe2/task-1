@@ -39,7 +39,7 @@ export default async function (req, res) {
           });
         }
         const user = await User.create(req.body);
-        console.log(user);
+
         res.status(200).json({ succesful: true, data: user });
       } catch (error) {
         res.status(400).json({ succesful: false, data: error.message });
